@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalPal Beta</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#10B981">
+    <link rel="icon" type="image/png" href="CalPal.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #10B981, #065F46);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: white;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 24px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .logo img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .app-name {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+            animation: slideUp 1s ease-out;
+        }
+
+        .beta-tag {
+            font-size: 16px;
+            opacity: 0.8;
+            margin-bottom: 48px;
+            letter-spacing: 2px;
+            animation: slideUp 1s ease-out 0.2s backwards;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            animation: spin 1s linear infinite;
+        }
+
+        .developer {
+            position: fixed;
+            bottom: 24px;
+            font-size: 14px;
+            opacity: 0.7;
+            animation: fadeIn 1s ease-out 0.4s backwards;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="LoadingScreen.png" alt="CalPal Logo">
+    </div>
+    <h1 class="app-name">CalPal</h1>
+    <div class="beta-tag">BETA</div>
+    <div class="loading-spinner"></div>
+    <div class="developer">Developed by CometCo</div>
+    <script src="loading.js"></script>
+</body>
+</html>

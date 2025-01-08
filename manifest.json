@@ -1,0 +1,33 @@
+{
+    "name": "CalPal - Nutrition Tracker",
+    "short_name": "CalPal",
+    "description": "Track calories and create personalized diet plans",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#10B981",
+    "theme_color": "#10B981",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/api/placeholder/192/192",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/api/placeholder/512/512",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/api/placeholder/1170/2532",
+            "sizes": "1170x2532",
+            "type": "image/png",
+            "platform": "wide",
+            "label": "CalPal Home Screen"
+        }
+    ]
+}
